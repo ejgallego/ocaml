@@ -430,7 +430,7 @@ static value intern_alloc_obj(struct caml_intern_state* s, caml_domain_state* d,
   } else {
     p = caml_shared_try_alloc(d->shared_heap, wosize, tag,
                               0 /* no reserved bits */);
-    d->allocated_words += Whsize_wosize(wosize);
+    //d->allocated_words += Whsize_wosize(wosize);
     if (p == NULL) {
       intern_cleanup (s);
       caml_raise_out_of_memory();
